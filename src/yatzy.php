@@ -83,13 +83,7 @@ class Yatzy
 
     public function sixes(): int
     {
-        $sum = 0;
-        for ($i = 0; $i < 5; $i++) {
-            if ($this->dice[$i] === 6) {
-                $sum = $sum + 6;
-            }
-        }
-        return $sum;
+        return $this->calcul(6);
     }
 
     public function scorePair(int $d1, int $d2, int $d3, int $d4, int $d5): int
