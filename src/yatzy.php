@@ -28,10 +28,7 @@ class Yatzy
         $total += $d5;
         return $total;
     }
-
-    /**
-     * @param array<int, int> $dice
-     */
+    
     public static function yatzyScore(array $dice): int
     {
         $counts = array_fill(0, 6, 0);
