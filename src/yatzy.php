@@ -43,17 +43,17 @@ class Yatzy
         return 0;
     }
 
-    public function calcul(int $val): int
+    public function calcul(int $diceValue): int
     {
         $sum = 0;
         for ($i = 0; $i < 5; $i++) {
-            if ($this->dice[$i] === $val) {
-                $sum += $val;
+            if ($this->dice[$i] === $diceValue) {
+                $sum += $diceValue;
             }
         }
         return $sum;
     }
-    // Code smell : 6 functions of calcul instead of one -> duplication
+
     public function ones(): int
     {
         return $this->calcul(1);
