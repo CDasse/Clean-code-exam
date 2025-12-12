@@ -6,6 +6,7 @@ namespace Yatzy;
 
 class Yatzy
 {
+    // Code smell : unused comment
     /**
      * @var array<int, int>
      */
@@ -49,6 +50,7 @@ class Yatzy
         return 0;
     }
 
+    // Code smell : 6 functions of calcul instead of one -> duplication
     public static function ones(int $d1, int $d2, int $d3, int $d4, int $d5): int
     {
         $sum = 0;
@@ -148,6 +150,7 @@ class Yatzy
         return $sum;
     }
 
+    // code smells : no 7 on a dice
     public function sevens(): int
     {
         $sum = 0;
@@ -175,6 +178,7 @@ class Yatzy
         return 0;
     }
 
+    // Code smell : wrong naming convention
     public static function twoPair(int $d1, int $d2, int $d3, int $d4, int $d5): int
     {
         $counts = array_fill(0, 6, 0);
@@ -199,6 +203,7 @@ class Yatzy
         return 0;
     }
 
+    // Code smell : wrong naming convention
     public static function threeOfAKind(int $d1, int $d2, int $d3, int $d4, int $d5): int
     {
         $t = array_fill(0, 6, 0);
@@ -255,6 +260,7 @@ class Yatzy
     {
         $tallies = [];
         $_2 = false;
+        // Code smell : unused variable
         $i = 0;
         $_2_at = 0;
         $_3 = false;
