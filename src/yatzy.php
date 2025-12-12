@@ -44,25 +44,14 @@ class Yatzy
     }
 
     // Code smell : 6 functions of calcul instead of one -> duplication
-    public static function ones(int $d1, int $d2, int $d3, int $d4, int $d5): int
+    public function ones(): int
     {
         $sum = 0;
-        if ($d1 === 1) {
-            ++$sum;
+        for ($i = 0; $i < 5; $i++) {
+            if ($this->dice[$i] === 1) {
+                $sum += 1;
+            }
         }
-        if ($d2 === 1) {
-            ++$sum;
-        }
-        if ($d3 === 1) {
-            ++$sum;
-        }
-        if ($d4 === 1) {
-            ++$sum;
-        }
-        if ($d5 === 1) {
-            ++$sum;
-        }
-
         return $sum;
     }
 
