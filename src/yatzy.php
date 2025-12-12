@@ -68,13 +68,7 @@ class Yatzy
 
     public function threes(): int
     {
-        $sum = 0;
-        for ($i = 0; $i < 5; $i++) {
-            if ($this->dice[$i] === 3) {
-                $sum += 3;
-            }
-        }
-        return $sum;
+        return $this->calcul(3);
     }
 
     public function fours(): int
