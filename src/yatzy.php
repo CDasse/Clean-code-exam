@@ -43,7 +43,7 @@ class Yatzy
         return 0;
     }
 
-    public function calcul(int $diceValue): int
+    public function sumOfAllConcerningDiceValue(int $diceValue): int
     {
         $sum = 0;
         for ($i = 0; $i < 5; $i++) {
@@ -56,34 +56,34 @@ class Yatzy
 
     public function ones(): int
     {
-        return $this->calcul(1);
+        return $this->sumOfAllConcerningDiceValue(1);
     }
 
     public function twos(): int
     {
-        return $this->calcul(2);
+        return $this->sumOfAllConcerningDiceValue(2);
     }
 
 
 
     public function threes(): int
     {
-        return $this->calcul(3);
+        return $this->sumOfAllConcerningDiceValue(3);
     }
 
     public function fours(): int
     {
-        return $this->calcul(4);
+        return $this->sumOfAllConcerningDiceValue(4);
     }
 
     public function fives(): int
     {
-        return $this->calcul(5);
+        return $this->sumOfAllConcerningDiceValue(5);
     }
 
     public function sixes(): int
     {
-        return $this->calcul(6);
+        return $this->sumOfAllConcerningDiceValue(6);
     }
 
     public function scorePair(int $d1, int $d2, int $d3, int $d4, int $d5): int
