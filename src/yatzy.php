@@ -43,16 +43,20 @@ class Yatzy
         return 0;
     }
 
-    // Code smell : 6 functions of calcul instead of one -> duplication
-    public function ones(): int
+    public function calcul(int $val): int
     {
         $sum = 0;
         for ($i = 0; $i < 5; $i++) {
-            if ($this->dice[$i] === 1) {
-                $sum += 1;
+            if ($this->dice[$i] === $val) {
+                $sum += $val;
             }
         }
         return $sum;
+    }
+    // Code smell : 6 functions of calcul instead of one -> duplication
+    public function ones(): int
+    {
+        return $this->calcul(1);
     }
 
     public function twos(): int
@@ -65,6 +69,8 @@ class Yatzy
         }
         return $sum;
     }
+
+
 
     public function threes(): int
     {
