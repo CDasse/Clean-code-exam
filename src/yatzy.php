@@ -86,7 +86,7 @@ class Yatzy
         ++$counts[$d3 - 1];
         ++$counts[$d4 - 1];
         ++$counts[$d5 - 1];
-        for ($i = 0; $i !== 6; $i++) {
+        for ($i = 0; $i < 6; $i++) {
             if ($counts[6 - $i - 1] === 2) {
                 return (6 - $i) * 2;
             }
