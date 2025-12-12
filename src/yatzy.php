@@ -135,8 +135,8 @@ class Yatzy
     public function sixes(): int
     {
         $sum = 0;
-        for ($at = 0; $at < 5; $at++) {
-            if ($this->dice[$at] === 6) {
+        for ($i = 0; $i < 5; $i++) {
+            if ($this->dice[$i] === 6) {
                 $sum = $sum + 6;
             }
         }
