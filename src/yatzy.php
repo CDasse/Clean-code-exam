@@ -237,7 +237,6 @@ class Yatzy
 
     public static function fullHouse(int $d1, int $d2, int $d3, int $d4, int $d5): int
     {
-        $tallies = [];
         $_2 = false;
         $_2_at = 0;
         $_3 = false;
