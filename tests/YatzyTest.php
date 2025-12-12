@@ -26,7 +26,7 @@ class YatzyTest extends TestCase
         self::assertSame(0, yatzy::yatzyScore([6, 6, 6, 6, 3]));
     }
 
-    public function test1s(): void
+    public function testOnes(): void
     {
         self::assertSame(1, (new yatzy(1, 2, 3, 4, 5))->ones());
         self::assertSame(2, (new yatzy(1, 2, 1, 4, 5))->ones());
@@ -34,7 +34,7 @@ class YatzyTest extends TestCase
         self::assertSame(4, (new yatzy(1, 2, 1, 1, 1))->ones());
     }
 
-    public function test2s(): void
+    public function testTwos(): void
     {
         self::assertSame(4, (new yatzy(1, 2, 3, 2, 6))->twos());
         self::assertSame(10, (new yatzy(2, 2, 2, 2, 2))->twos());
@@ -46,7 +46,7 @@ class YatzyTest extends TestCase
         self::assertSame(12, (new yatzy(2, 3, 3, 3, 3))->threes());
     }
 
-    public function testFoursTest(): void
+    public function testFours(): void
     {
         self::assertSame(12, (new yatzy(4, 4, 4, 5, 5))->fours());
         self::assertSame(8, (new yatzy(4, 4, 5, 5, 5))->fours());
@@ -60,7 +60,7 @@ class YatzyTest extends TestCase
         self::assertSame(20, (new yatzy(4, 5, 5, 5, 5))->Fives());
     }
 
-    public function sixes_test(): void
+    public function testSixes(): void
     {
         self::assertSame(0, (new yatzy(4, 4, 4, 5, 5))->sixes());
         self::assertSame(6, (new yatzy(4, 4, 6, 5, 5))->sixes());
