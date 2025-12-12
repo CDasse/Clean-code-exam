@@ -36,14 +36,14 @@ class YatzyTest extends TestCase
 
     public function test2s(): void
     {
-        self::assertSame(4, yatzy::twos(1, 2, 3, 2, 6));
-        self::assertSame(10, yatzy::twos(2, 2, 2, 2, 2));
+        self::assertSame(4, (new yatzy(1, 2, 3, 2, 6))->twos());
+        self::assertSame(10, (new yatzy(2, 2, 2, 2, 2))->twos());
     }
 
     public function testThrees(): void
     {
-        self::assertSame(6, yatzy::threes(1, 2, 3, 2, 3));
-        self::assertSame(12, yatzy::threes(2, 3, 3, 3, 3));
+        self::assertSame(6, (new yatzy(1, 2, 3, 2, 3))->threes());
+        self::assertSame(12, (new yatzy(2, 3, 3, 3, 3))->threes());
     }
 
     public function testFoursTest(): void
@@ -69,23 +69,23 @@ class YatzyTest extends TestCase
 
     public function testOnePair(): void
     {
-        self::assertSame(6, (new yatzy(3, 4, 3, 5, 6))->score_pair(3, 4, 3, 5, 6));
-        self::assertSame(10, (new yatzy(5, 3, 3, 3, 5))->score_pair(5, 3, 3, 3, 5));
-        self::assertSame(12, (new yatzy(5, 3, 6, 6, 5))->score_pair(5, 3, 6, 6, 5));
+        self::assertSame(6, (new yatzy(3, 4, 3, 5, 6))->scorePair(3, 4, 3, 5, 6));
+        self::assertSame(10, (new yatzy(5, 3, 3, 3, 5))->scorePair(5, 3, 3, 3, 5));
+        self::assertSame(12, (new yatzy(5, 3, 6, 6, 5))->scorePair(5, 3, 6, 6, 5));
     }
 
     public function testTwoPair(): void
     {
-        self::assertSame(16, yatzy::two_pair(3, 3, 5, 4, 5));
-        self::assertSame(18, yatzy::two_pair(3, 3, 6, 6, 6));
-        self::assertSame(0, yatzy::two_pair(3, 3, 6, 5, 4));
+        self::assertSame(16, yatzy::twoPair(3, 3, 5, 4, 5));
+        self::assertSame(18, yatzy::twoPair(3, 3, 6, 6, 6));
+        self::assertSame(0, yatzy::twoPair(3, 3, 6, 5, 4));
     }
 
     public function testThreeOfAKind(): void
     {
-        self::assertSame(9, yatzy::three_of_a_kind(3, 3, 3, 4, 5));
-        self::assertSame(15, yatzy::three_of_a_kind(5, 3, 5, 4, 5));
-        self::assertSame(9, yatzy::three_of_a_kind(3, 3, 3, 2, 1));
+        self::assertSame(9, yatzy::threeOfAKind(3, 3, 3, 4, 5));
+        self::assertSame(15, yatzy::threeOfAKind(5, 3, 5, 4, 5));
+        self::assertSame(9, yatzy::threeOfAKind(3, 3, 3, 2, 1));
     }
 
     public function testSmallStraight(): void
