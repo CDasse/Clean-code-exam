@@ -61,13 +61,7 @@ class Yatzy
 
     public function twos(): int
     {
-        $sum = 0;
-        for ($i = 0; $i < 5; $i++) {
-            if ($this->dice[$i] === 2) {
-                $sum += 2;
-            }
-        }
-        return $sum;
+        return $this->calcul(2);
     }
 
 
