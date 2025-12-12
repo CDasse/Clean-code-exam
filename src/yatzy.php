@@ -6,10 +6,6 @@ namespace Yatzy;
 
 class Yatzy
 {
-    // Code smell : unused comment
-    /**
-     * @var array<int, int>
-     */
     private array $dice;
 
     public function __construct(int $d1, int $d2, int $d3, int $d4, int $d5)
