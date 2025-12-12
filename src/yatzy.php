@@ -58,8 +58,6 @@ class Yatzy
         return $this->sumOfAllConcerningDiceValue(2);
     }
 
-
-
     public function threes(): int
     {
         return $this->sumOfAllConcerningDiceValue(3);
@@ -88,9 +86,9 @@ class Yatzy
         ++$counts[$d3 - 1];
         ++$counts[$d4 - 1];
         ++$counts[$d5 - 1];
-        for ($at = 0; $at !== 6; $at++) {
-            if ($counts[6 - $at - 1] === 2) {
-                return (6 - $at) * 2;
+        for ($i = 0; $i !== 6; $i++) {
+            if ($counts[6 - $i - 1] === 2) {
+                return (6 - $i) * 2;
             }
         }
         return 0;
