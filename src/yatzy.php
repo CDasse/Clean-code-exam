@@ -66,25 +66,14 @@ class Yatzy
         return $sum;
     }
 
-    public static function twos(int $d1, int $d2, int $d3, int $d4, int $d5): int
+    public function twos(): int
     {
         $sum = 0;
-        if ($d1 === 2) {
-            $sum += 2;
+        for ($i = 0; $i < 5; $i++) {
+            if ($this->dice[$i] === 2) {
+                $sum += 2;
+            }
         }
-        if ($d2 === 2) {
-            $sum += 2;
-        }
-        if ($d3 === 2) {
-            $sum += 2;
-        }
-        if ($d4 === 2) {
-            $sum += 2;
-        }
-        if ($d5 === 2) {
-            $sum += 2;
-        }
-
         return $sum;
     }
 
