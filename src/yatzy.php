@@ -126,7 +126,7 @@ class Yatzy
         return $sum;
     }
 
-    public function Fives(): int
+    public function fives(): int
     {
         $s = 0;
         $i = 0;
