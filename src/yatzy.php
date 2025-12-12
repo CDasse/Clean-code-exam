@@ -28,7 +28,7 @@ class Yatzy
         $total += $d5;
         return $total;
     }
-    
+
     public static function yatzyScore(array $dice): int
     {
         $counts = array_fill(0, 6, 0);
@@ -138,18 +138,6 @@ class Yatzy
         for ($at = 0; $at < 5; $at++) {
             if ($this->dice[$at] === 6) {
                 $sum = $sum + 6;
-            }
-        }
-        return $sum;
-    }
-
-    // code smells : no 7 on a dice
-    public function sevens(): int
-    {
-        $sum = 0;
-        for ($at = 0; $at < 5; $at++) {
-            if ($this->dice[$at] === 7) {
-                $sum = $sum + 7;
             }
         }
         return $sum;
