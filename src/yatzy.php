@@ -129,7 +129,6 @@ class Yatzy
     public function fives(): int
     {
         $sum = 0;
-        $i = 0;
         for ($i = 0; $i < 5; $i++) {
             if ($this->dice[$i] === 5) {
                 $sum = $sum + 5;
